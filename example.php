@@ -103,6 +103,8 @@ for ($j=0; $j<10; $j++) {
 			echo "expected output = (".implode(", ", $n->trainOutput[$i]).") ";
 			echo "output from neural network = (".implode(", ", $output).")\n</div>";
 		}
+		$calculado=$n->calculate(array(-1,-1,1));
+		echo "<p style='color:red;'>Calculado para'(-1,-1,1)' =(".implode(",",$calculado).")</p>";
 		echo "</div>";
 	}
 }
